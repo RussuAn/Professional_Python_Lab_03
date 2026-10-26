@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "student-stream-processor"
+version = "0.1.0"
+description = "Streaming student data processing"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Руссу Анастасія"}]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[project.scripts]
+student-stream = "stream_processor.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
